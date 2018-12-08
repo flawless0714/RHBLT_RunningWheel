@@ -510,17 +510,6 @@ SI_SBIT (TMR2CN0_TF2LEN,  SFR_TMR2CN0, 5); ///< Timer 2 Low Byte Interrupt Enabl
 SI_SBIT (TMR2CN0_TF2L,    SFR_TMR2CN0, 6); ///< Timer 2 Low Byte Overflow Flag     
 SI_SBIT (TMR2CN0_TF2H,    SFR_TMR2CN0, 7); ///< Timer 2 High Byte Overflow Flag  
 
-// TMR3CN0 (Timer 3 Control 0)
-#define SFR_TMR3CN0 0x91
-SI_SBIT (TMR3CN0_T3XCLK0, SFR_TMR3CN0, 0); ///< Timer 3 External Clock Select Bit 0
-SI_SBIT (TMR3CN0_T3XCLK1, SFR_TMR3CN0, 1); ///< Timer 3 External Clock Select Bit 1
-SI_SBIT (TMR3CN0_TR3,     SFR_TMR3CN0, 2); ///< Timer 3 Run Control                
-SI_SBIT (TMR3CN0_T23PLIT, SFR_TMR3CN0, 3); ///< Timer 3 Split Mode Enable          
-SI_SBIT (TMR3CN0_TF3CEN,  SFR_TMR3CN0, 4); ///< Timer 3 Capture Enable             
-SI_SBIT (TMR3CN0_TF3LEN,  SFR_TMR3CN0, 5); ///< Timer 3 Low Byte Interrupt Enable  
-SI_SBIT (TMR3CN0_TF3L,    SFR_TMR3CN0, 6); ///< Timer 3 Low Byte Overflow Flag     
-SI_SBIT (TMR3CN0_TF3H,    SFR_TMR3CN0, 7); ///< Timer 3 High Byte Overflow Flag 
-
 // TMR4CN0 (Timer 4 Control 0)
 #define SFR_TMR4CN0 0x98
 SI_SBIT (TMR4CN0_T4XCLK0, SFR_TMR4CN0, 0); ///< Timer 4 External Clock Select Bit 0
