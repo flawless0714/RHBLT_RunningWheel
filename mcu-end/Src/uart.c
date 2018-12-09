@@ -157,6 +157,7 @@ bool uartIsDataKnockDoor(void)	/* with this implementation, data similarity shou
 		while (uart.state != STANDBY) {}
 		memset(&wifiSendBuffer, 0, SEND_BUFFER_SIZE);
 		memset(&wifiRecvBuffer, 0, RECV_BUFFER_SIZE);
+		wifi.isDataChanged = 0;
 		uart.Tstate = IDLE;	/* training is about to begin */
 		return true;
 	}
