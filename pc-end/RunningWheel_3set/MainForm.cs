@@ -1,4 +1,4 @@
-﻿// ver 0.1.0
+﻿// ver 0.2.0-rc
 /*
  WARN: SINCE WRONG GIT BRANCH, HERE SHOULD ONLY CHENGE ONE SECTION WITH COMMENT BUG WHEN MERGE BACK TO MASTER
  1. after received data, ack didnt return properly.
@@ -417,16 +417,24 @@ namespace RunningWheel_3set
                     switch (ratPos)
                     {
                         case 1:
-                            ratPosL.Text = "10";
-                            ratPos = 10;
+                            ratPosL.Text = L1_angle.Text;
+                            ratPos = ushort.Parse(L1_angle.Text.Replace("°", ""));
                             break;
                         case 2:
-                            ratPosL.Text = "40";
-                            ratPos = 40;
+                            ratPosL.Text = L2_angle.Text;
+                            ratPos = ushort.Parse(L2_angle.Text.Replace("°", ""));
                             break;
                         case 3:
-                            ratPosL.Text = "70";
-                            ratPos = 70;
+                            ratPosL.Text = L3_angle.Text;
+                            ratPos = ushort.Parse(L3_angle.Text.Replace("°", ""));
+                            break;
+                        case 4:
+                            ratPosL.Text = L4_angle.Text;
+                            ratPos = ushort.Parse(L4_angle.Text.Replace("°", ""));
+                            break;
+                        case 5:
+                            ratPosL.Text = L5_angle.Text;
+                            ratPos = ushort.Parse(L5_angle.Text.Replace("°", ""));
                             break;
                     }
                     /*----------------------------------------------*/
@@ -454,22 +462,30 @@ namespace RunningWheel_3set
                             break;
                             /* POS case 3 deprecated since we changed total POS from 4 to 3 */
                     }
-                    resultStreamWriter.WriteLine("L: " + ratPos.ToString() + "cm" + "  " + recordPos.ToString() + " m/min");
+                    resultStreamWriter.WriteLine("L: " + ratPos.ToString() + "°" + "\t" + recordPos.ToString() + " m/min");
                     ratPos = receiveDataList[1];
                     /*---------------------ratPos representation----*/
                     switch (ratPos)
                     {
                         case 1:
-                            ratPosM.Text = "10";
-                            ratPos = 10;
+                            ratPosM.Text = M1_angle.Text;
+                            ratPos = ushort.Parse(M1_angle.Text.Replace("°", ""));
                             break;
                         case 2:
-                            ratPosM.Text = "40";
-                            ratPos = 40;
+                            ratPosM.Text = M2_angle.Text;
+                            ratPos = ushort.Parse(M2_angle.Text.Replace("°", ""));
                             break;
                         case 3:
-                            ratPosM.Text = "70";
-                            ratPos = 70;
+                            ratPosM.Text = M3_angle.Text;
+                            ratPos = ushort.Parse(M3_angle.Text.Replace("°", ""));
+                            break;
+                        case 4:
+                            ratPosM.Text = M4_angle.Text;
+                            ratPos = ushort.Parse(M4_angle.Text.Replace("°", ""));
+                            break;
+                        case 5:
+                            ratPosM.Text = M5_angle.Text;
+                            ratPos = ushort.Parse(M5_angle.Text.Replace("°", ""));
                             break;
                     }
                     /*----------------------------------------------*/
@@ -496,22 +512,30 @@ namespace RunningWheel_3set
                             recordPos = 12.5f;
                             break;
                     }
-                    resultStreamWriter.WriteLine("M: " + ratPos.ToString() + "cm" + "  " + recordPos.ToString() + " m/min");
+                    resultStreamWriter.WriteLine("M: " + ratPos.ToString() + "°" + "\t" + recordPos.ToString() + " m/min");
                     ratPos = receiveDataList[2]; /* WARN: (MUST FIX IN MASTER BRANCH)bug fixed */
                     /*---------------------ratPos representation----*/
                     switch (ratPos)
                     {
                         case 1:
-                            ratPosR.Text = "10";
-                            ratPos = 10;
+                            ratPosR.Text = R1_angle.Text;
+                            ratPos = ushort.Parse(R1_angle.Text.Replace("°", ""));
                             break;
                         case 2:
-                            ratPosR.Text = "40";
-                            ratPos = 40;
+                            ratPosR.Text = R2_angle.Text;
+                            ratPos = ushort.Parse(R2_angle.Text.Replace("°", ""));
                             break;
                         case 3:
-                            ratPosR.Text = "70";
-                            ratPos = 70;
+                            ratPosR.Text = R3_angle.Text;
+                            ratPos = ushort.Parse(R3_angle.Text.Replace("°", ""));
+                            break;
+                        case 4:
+                            ratPosR.Text = R4_angle.Text;
+                            ratPos = ushort.Parse(R4_angle.Text.Replace("°", ""));
+                            break;
+                        case 5:
+                            ratPosR.Text = R5_angle.Text;
+                            ratPos = ushort.Parse(R5_angle.Text.Replace("°", ""));
                             break;
                     }
                     /*----------------------------------------------*/
@@ -538,11 +562,11 @@ namespace RunningWheel_3set
                             recordPos = 12.5f;
                             break;
                     }                    
-                    resultStreamWriter.WriteLine("R: " + ratPos.ToString() + "cm" + "  " + recordPos.ToString() + " m/min" + "\r\n");
+                    resultStreamWriter.WriteLine("R: " + ratPos.ToString() + "°" + "\t" + recordPos.ToString() + " m/min" + "\r\n");
                     resultStreamWriter.Flush();
                     
                     /*--------------------------------*/
-                    //this line and following line is used in wifi module. globalBuffer.g_recvSocketfd.SendTo(DACspeed, 6, SocketFlags.None, remoteIpInfo); /* send ACK back */
+                    //this line and following line is used in wireless mode. globalBuffer.g_recvSocketfd.SendTo(DACspeed, 6, SocketFlags.None, remoteIpInfo); /* send ACK back */
                     //Array.Clear(globalBuffer.g_recvBuffer, 0, globalBuffer.g_recvBuffer.Length);
                     /* uart transmission use-------------------------*/
                     receiveDataList.Clear();
@@ -739,90 +763,90 @@ namespace RunningWheel_3set
         private void hScrollBar1_L_Scroll(object sender, ScrollEventArgs e)
         {
             label68.Text = e.NewValue.ToString() + "°";
-            label38.Text = e.NewValue.ToString() + "°";
+            L1_angle.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
-            label39.Text = e.NewValue.ToString() + "°";
+            L2_angle.Text = e.NewValue.ToString() + "°";
             label25.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar6_Scroll(object sender, ScrollEventArgs e)
         {
-            label41.Text = e.NewValue.ToString() + "°";
+            L3_angle.Text = e.NewValue.ToString() + "°";
             label26.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar8_Scroll(object sender, ScrollEventArgs e)
         {
-            label43.Text = e.NewValue.ToString() + "°";
+            L4_angle.Text = e.NewValue.ToString() + "°";
             label27.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar9_Scroll(object sender, ScrollEventArgs e)
         {
-            label45.Text = e.NewValue.ToString() + "°";
+            L5_angle.Text = e.NewValue.ToString() + "°";
             label37.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar7_Scroll(object sender, ScrollEventArgs e)
         {
-            label55.Text = e.NewValue.ToString() + "°";
+            M1_angle.Text = e.NewValue.ToString() + "°";
             label72.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar5_Scroll(object sender, ScrollEventArgs e)
         {
-            label53.Text = e.NewValue.ToString() + "°";
+            M2_angle.Text = e.NewValue.ToString() + "°";
             label71.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar4_Scroll(object sender, ScrollEventArgs e)
         {
-            label51.Text = e.NewValue.ToString() + "°";
+            M3_angle.Text = e.NewValue.ToString() + "°";
             label70.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar3_Scroll(object sender, ScrollEventArgs e)
         {
-            label49.Text = e.NewValue.ToString() + "°";
+            M4_angle.Text = e.NewValue.ToString() + "°";
             label69.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar2_Scroll(object sender, ScrollEventArgs e)
         {
             label67.Text = e.NewValue.ToString() + "°";
-            label47.Text = e.NewValue.ToString() + "°";
+            M5_angle.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar14_Scroll(object sender, ScrollEventArgs e)
         {
-            label65.Text = e.NewValue.ToString() + "°";
+            R1_angle.Text = e.NewValue.ToString() + "°";
             label77.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar13_Scroll(object sender, ScrollEventArgs e)
         {
-            label63.Text = e.NewValue.ToString() + "°";
+            R2_angle.Text = e.NewValue.ToString() + "°";
             label76.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar12_Scroll(object sender, ScrollEventArgs e)
         {
-            label61.Text = e.NewValue.ToString() + "°";
+            R3_angle.Text = e.NewValue.ToString() + "°";
             label75.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar11_Scroll(object sender, ScrollEventArgs e)
         {
             label74.Text = e.NewValue.ToString() + "°";
-            label59.Text = e.NewValue.ToString() + "°";
+            R4_angle.Text = e.NewValue.ToString() + "°";
         }
 
         private void hScrollBar10_Scroll(object sender, ScrollEventArgs e)
         {
-            label57.Text = e.NewValue.ToString() + "°";
+            R5_angle.Text = e.NewValue.ToString() + "°";
             label73.Text = e.NewValue.ToString() + "°";
         }
     }
