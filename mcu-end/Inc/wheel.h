@@ -7,6 +7,8 @@
 
 #include "esp8266.h"
 
+#define IR_DETERMINE_THRESHOLD 5000
+
 void wheelProcess(void);
 
 
