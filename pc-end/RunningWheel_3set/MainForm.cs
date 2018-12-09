@@ -235,6 +235,14 @@ namespace RunningWheel_3set
                                             DACspeed[0] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm1speed3".ToString(), true)[0]).Value)) / 2.5))];
                                             DACspeed[1] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm1speed3".ToString(), true)[0]).Value)) / 2.5))] >> 8);
                                             break;
+                                        case 4:
+                                            DACspeed[0] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm1speed4".ToString(), true)[0]).Value)) / 2.5))];
+                                            DACspeed[1] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm1speed4".ToString(), true)[0]).Value)) / 2.5))] >> 8);
+                                            break;
+                                        case 5:
+                                            DACspeed[0] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm1speed5".ToString(), true)[0]).Value)) / 2.5))];
+                                            DACspeed[1] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm1speed5".ToString(), true)[0]).Value)) / 2.5))] >> 8);
+                                            break;
                                     }
                                     break;
                                 case 1:
@@ -252,6 +260,14 @@ namespace RunningWheel_3set
                                             DACspeed[2] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm2speed3".ToString(), true)[0]).Value)) / 2.5))];
                                             DACspeed[3] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm2speed3".ToString(), true)[0]).Value)) / 2.5))] >> 8);
                                             break;
+                                        case 4:
+                                            DACspeed[2] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm2speed4".ToString(), true)[0]).Value)) / 2.5))];
+                                            DACspeed[3] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm2speed4".ToString(), true)[0]).Value)) / 2.5))] >> 8);
+                                            break;
+                                        case 5:
+                                            DACspeed[2] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm2speed5".ToString(), true)[0]).Value)) / 2.5))];
+                                            DACspeed[3] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm2speed5".ToString(), true)[0]).Value)) / 2.5))] >> 8);
+                                            break;
                                     }
                                     break;
                                 case 2:
@@ -268,6 +284,14 @@ namespace RunningWheel_3set
                                         case 3:
                                             DACspeed[4] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm3speed3".ToString(), true)[0]).Value)) / 2.5))];
                                             DACspeed[5] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm3speed3".ToString(), true)[0]).Value)) / 2.5))] >> 8);
+                                            break;
+                                        case 4:
+                                            DACspeed[4] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm3speed4".ToString(), true)[0]).Value)) / 2.5))];
+                                            DACspeed[5] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm3speed4".ToString(), true)[0]).Value)) / 2.5))] >> 8);
+                                            break;
+                                        case 5:
+                                            DACspeed[4] = (byte)DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm3speed5".ToString(), true)[0]).Value)) / 2.5))];
+                                            DACspeed[5] = (byte)(DACtable[(ushort)(((Decimal.ToDouble(((NumericUpDown)Controls.Find("arm3speed5".ToString(), true)[0]).Value)) / 2.5))] >> 8);
                                             break;
                                     }
                                     break;
@@ -710,6 +734,96 @@ namespace RunningWheel_3set
         public void getTimeStamp(ushort EsNumIndex, ushort countIndex)
         {
             wheel.wheel[EsNumIndex].occur[countIndex].timeStay = getCurrentTimestamp();
+        }
+
+        private void hScrollBar1_L_Scroll(object sender, ScrollEventArgs e)
+        {
+            label68.Text = e.NewValue.ToString() + "°";
+            label38.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            label39.Text = e.NewValue.ToString() + "°";
+            label25.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar6_Scroll(object sender, ScrollEventArgs e)
+        {
+            label41.Text = e.NewValue.ToString() + "°";
+            label26.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar8_Scroll(object sender, ScrollEventArgs e)
+        {
+            label43.Text = e.NewValue.ToString() + "°";
+            label27.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar9_Scroll(object sender, ScrollEventArgs e)
+        {
+            label45.Text = e.NewValue.ToString() + "°";
+            label37.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar7_Scroll(object sender, ScrollEventArgs e)
+        {
+            label55.Text = e.NewValue.ToString() + "°";
+            label72.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar5_Scroll(object sender, ScrollEventArgs e)
+        {
+            label53.Text = e.NewValue.ToString() + "°";
+            label71.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar4_Scroll(object sender, ScrollEventArgs e)
+        {
+            label51.Text = e.NewValue.ToString() + "°";
+            label70.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar3_Scroll(object sender, ScrollEventArgs e)
+        {
+            label49.Text = e.NewValue.ToString() + "°";
+            label69.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar2_Scroll(object sender, ScrollEventArgs e)
+        {
+            label67.Text = e.NewValue.ToString() + "°";
+            label47.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar14_Scroll(object sender, ScrollEventArgs e)
+        {
+            label65.Text = e.NewValue.ToString() + "°";
+            label77.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar13_Scroll(object sender, ScrollEventArgs e)
+        {
+            label63.Text = e.NewValue.ToString() + "°";
+            label76.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar12_Scroll(object sender, ScrollEventArgs e)
+        {
+            label61.Text = e.NewValue.ToString() + "°";
+            label75.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar11_Scroll(object sender, ScrollEventArgs e)
+        {
+            label74.Text = e.NewValue.ToString() + "°";
+            label59.Text = e.NewValue.ToString() + "°";
+        }
+
+        private void hScrollBar10_Scroll(object sender, ScrollEventArgs e)
+        {
+            label57.Text = e.NewValue.ToString() + "°";
+            label73.Text = e.NewValue.ToString() + "°";
         }
     }
     static class globalBuffer
