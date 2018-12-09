@@ -11,7 +11,8 @@ extern volatile Uart uart;
 extern volatile Mcu mcu;
 extern volatile Wifi wifi;
 
-SI_SBIT(LED0, SFR_P1, 4); // P1.4 LED0
+SI_SBIT(LED1, SFR_P1, 5); // P1.4 LED0
+SI_SBIT(IR1, SFR_P0, 2);
 
 void UART0_ISR(void) interrupt UART0_IRQn /* WARN: we only turn interrupt at needed */
 {
@@ -73,12 +74,25 @@ void TIMER2_ISR(void) interrupt TIMER2_IRQn
     TMR2CN0_TF2H = 0;
     
     mcu.sysTick++;
-    
     if ((mcu.sysTick % 500) == 0) {
         runningWheel.intervalFlag = 1;
-        //LED0 = ~LED0;
+        //LED1 = ~LED1;
     }
+
+}
+
+/* freq = 38Khz, for IR */
+void TIMER3_ISR(void) interrupt TIMER3_IRQn 
+{
+    uint8_t savedpage = SFRPAGE;
+    
+    SFRPAGE = 0x0;
+    TMR3CN0 &= 0x7f; /* we use this unset mechanism unlike timer 2 due to TMR3CN0 is not bit-addressable */
+    SFRPAGE = savedpage;
+
+    IR1 = ~IR1;
     
 }
+
 /*************flawless0714 * END OF FILE****/
 
