@@ -13,7 +13,6 @@ extern volatile TrainingPlatform runningWheel;
 extern volatile Uart uart;
 extern const uint16_t xdata SPEED_TABLE[6];
 extern volatile Wifi wifi; 
-SI_SBIT (LED0, SFR_P1, 5);    
 SI_SBIT (BC_EN, SFR_P2, 2);
 //uint32_t debugTick = 0;
 
