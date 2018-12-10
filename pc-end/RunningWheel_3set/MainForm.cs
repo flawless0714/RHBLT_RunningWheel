@@ -36,7 +36,7 @@ namespace RunningWheel_3set
         byte[] recvBuffer       = new byte[64]; 
         byte[] dataBuffer       = new byte[100];
         byte[] sendBuffer       = new byte[6] {114, 100, 0, 0, 0, 0};
-        ushort[] DACtable = new ushort[6] { 0x0, 0x0106, 0x020d, 0x03b1, 0x0521, 0x0628 }; /* 0.75(element 4) was 0x041a *//* speed from low to high as index from 0 ~ max */
+        ushort[] DACtable = new ushort[11] { 0x0, 0x00f8, 0x01f0, 0x02e8, 0x03e1, 0x04d9, 0x05d2, 0x06ca, 0x07c2, 0x08ba, 0x09b2 }; /* 0.75(element 4) was 0x041a *//* speed from low to high as index from 0 ~ max */
         //ushort[] DACtable = new ushort[6] { 0x0, 0x020d, 0x041a, 0x0521, 0x0628 };
         byte[] DACspeed = new byte[6] { 0, 0, 0, 0, 0, 0 };
         FileStream resultFileStream;

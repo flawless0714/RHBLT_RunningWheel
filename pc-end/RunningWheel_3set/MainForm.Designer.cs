@@ -1024,19 +1024,19 @@
             this.arm1speed4.Location = new System.Drawing.Point(854, 185);
             this.arm1speed4.Margin = new System.Windows.Forms.Padding(2);
             this.arm1speed4.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm1speed4.Name = "arm1speed4";
             this.arm1speed4.ReadOnly = true;
             this.arm1speed4.Size = new System.Drawing.Size(61, 33);
             this.arm1speed4.TabIndex = 101;
             this.arm1speed4.Value = new decimal(new int[] {
-            5,
+            125,
             0,
             0,
-            0});
+            65536});
             // 
             // arm2speed4
             // 
@@ -1050,19 +1050,19 @@
             this.arm2speed4.Location = new System.Drawing.Point(854, 264);
             this.arm2speed4.Margin = new System.Windows.Forms.Padding(2);
             this.arm2speed4.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm2speed4.Name = "arm2speed4";
             this.arm2speed4.ReadOnly = true;
             this.arm2speed4.Size = new System.Drawing.Size(61, 33);
             this.arm2speed4.TabIndex = 100;
             this.arm2speed4.Value = new decimal(new int[] {
-            5,
+            125,
             0,
             0,
-            0});
+            65536});
             // 
             // arm3speed4
             // 
@@ -1076,19 +1076,19 @@
             this.arm3speed4.Location = new System.Drawing.Point(854, 344);
             this.arm3speed4.Margin = new System.Windows.Forms.Padding(2);
             this.arm3speed4.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm3speed4.Name = "arm3speed4";
             this.arm3speed4.ReadOnly = true;
             this.arm3speed4.Size = new System.Drawing.Size(61, 33);
             this.arm3speed4.TabIndex = 99;
             this.arm3speed4.Value = new decimal(new int[] {
-            5,
+            125,
             0,
             0,
-            0});
+            65536});
             // 
             // arm3speed5
             // 
@@ -1102,19 +1102,19 @@
             this.arm3speed5.Location = new System.Drawing.Point(930, 344);
             this.arm3speed5.Margin = new System.Windows.Forms.Padding(2);
             this.arm3speed5.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm3speed5.Name = "arm3speed5";
             this.arm3speed5.ReadOnly = true;
             this.arm3speed5.Size = new System.Drawing.Size(61, 33);
             this.arm3speed5.TabIndex = 98;
             this.arm3speed5.Value = new decimal(new int[] {
-            5,
+            175,
             0,
             0,
-            0});
+            65536});
             // 
             // arm2speed5
             // 
@@ -1128,19 +1128,19 @@
             this.arm2speed5.Location = new System.Drawing.Point(930, 264);
             this.arm2speed5.Margin = new System.Windows.Forms.Padding(2);
             this.arm2speed5.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm2speed5.Name = "arm2speed5";
             this.arm2speed5.ReadOnly = true;
             this.arm2speed5.Size = new System.Drawing.Size(61, 33);
             this.arm2speed5.TabIndex = 97;
             this.arm2speed5.Value = new decimal(new int[] {
-            5,
+            175,
             0,
             0,
-            0});
+            65536});
             // 
             // arm1speed5
             // 
@@ -1154,19 +1154,19 @@
             this.arm1speed5.Location = new System.Drawing.Point(930, 185);
             this.arm1speed5.Margin = new System.Windows.Forms.Padding(2);
             this.arm1speed5.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm1speed5.Name = "arm1speed5";
             this.arm1speed5.ReadOnly = true;
             this.arm1speed5.Size = new System.Drawing.Size(61, 33);
             this.arm1speed5.TabIndex = 96;
             this.arm1speed5.Value = new decimal(new int[] {
-            5,
+            175,
             0,
             0,
-            0});
+            65536});
             // 
             // tabControl1
             // 
@@ -1877,16 +1877,16 @@
             this.arm1speed2.Location = new System.Drawing.Point(702, 185);
             this.arm1speed2.Margin = new System.Windows.Forms.Padding(2);
             this.arm1speed2.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm1speed2.Name = "arm1speed2";
             this.arm1speed2.ReadOnly = true;
             this.arm1speed2.Size = new System.Drawing.Size(61, 33);
             this.arm1speed2.TabIndex = 79;
             this.arm1speed2.Value = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
@@ -1904,19 +1904,19 @@
             this.arm1speed3.Location = new System.Drawing.Point(778, 185);
             this.arm1speed3.Margin = new System.Windows.Forms.Padding(2);
             this.arm1speed3.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm1speed3.Name = "arm1speed3";
             this.arm1speed3.ReadOnly = true;
             this.arm1speed3.Size = new System.Drawing.Size(61, 33);
             this.arm1speed3.TabIndex = 78;
             this.arm1speed3.Value = new decimal(new int[] {
-            5,
+            75,
             0,
             0,
-            0});
+            65536});
             // 
             // arm2speed1
             // 
@@ -1930,19 +1930,14 @@
             this.arm2speed1.Location = new System.Drawing.Point(626, 264);
             this.arm2speed1.Margin = new System.Windows.Forms.Padding(2);
             this.arm2speed1.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm2speed1.Name = "arm2speed1";
             this.arm2speed1.ReadOnly = true;
             this.arm2speed1.Size = new System.Drawing.Size(61, 33);
             this.arm2speed1.TabIndex = 76;
-            this.arm2speed1.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             // 
             // arm2speed2
             // 
@@ -1956,16 +1951,16 @@
             this.arm2speed2.Location = new System.Drawing.Point(702, 264);
             this.arm2speed2.Margin = new System.Windows.Forms.Padding(2);
             this.arm2speed2.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm2speed2.Name = "arm2speed2";
             this.arm2speed2.ReadOnly = true;
             this.arm2speed2.Size = new System.Drawing.Size(61, 33);
             this.arm2speed2.TabIndex = 75;
             this.arm2speed2.Value = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
@@ -1982,19 +1977,19 @@
             this.arm2speed3.Location = new System.Drawing.Point(778, 264);
             this.arm2speed3.Margin = new System.Windows.Forms.Padding(2);
             this.arm2speed3.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm2speed3.Name = "arm2speed3";
             this.arm2speed3.ReadOnly = true;
             this.arm2speed3.Size = new System.Drawing.Size(61, 33);
             this.arm2speed3.TabIndex = 74;
             this.arm2speed3.Value = new decimal(new int[] {
-            5,
+            75,
             0,
             0,
-            0});
+            65536});
             // 
             // arm3speed1
             // 
@@ -2008,19 +2003,14 @@
             this.arm3speed1.Location = new System.Drawing.Point(626, 344);
             this.arm3speed1.Margin = new System.Windows.Forms.Padding(2);
             this.arm3speed1.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm3speed1.Name = "arm3speed1";
             this.arm3speed1.ReadOnly = true;
             this.arm3speed1.Size = new System.Drawing.Size(61, 33);
             this.arm3speed1.TabIndex = 72;
-            this.arm3speed1.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             // 
             // arm3speed2
             // 
@@ -2034,16 +2024,16 @@
             this.arm3speed2.Location = new System.Drawing.Point(702, 344);
             this.arm3speed2.Margin = new System.Windows.Forms.Padding(2);
             this.arm3speed2.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm3speed2.Name = "arm3speed2";
             this.arm3speed2.ReadOnly = true;
             this.arm3speed2.Size = new System.Drawing.Size(61, 33);
             this.arm3speed2.TabIndex = 71;
             this.arm3speed2.Value = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
@@ -2060,19 +2050,19 @@
             this.arm3speed3.Location = new System.Drawing.Point(778, 344);
             this.arm3speed3.Margin = new System.Windows.Forms.Padding(2);
             this.arm3speed3.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm3speed3.Name = "arm3speed3";
             this.arm3speed3.ReadOnly = true;
             this.arm3speed3.Size = new System.Drawing.Size(61, 33);
             this.arm3speed3.TabIndex = 69;
             this.arm3speed3.Value = new decimal(new int[] {
-            5,
+            75,
             0,
             0,
-            0});
+            65536});
             // 
             // label31
             // 
@@ -2170,19 +2160,14 @@
             this.arm1speed1.Location = new System.Drawing.Point(626, 185);
             this.arm1speed1.Margin = new System.Windows.Forms.Padding(2);
             this.arm1speed1.Maximum = new decimal(new int[] {
-            125,
+            25,
             0,
             0,
-            65536});
+            0});
             this.arm1speed1.Name = "arm1speed1";
             this.arm1speed1.ReadOnly = true;
             this.arm1speed1.Size = new System.Drawing.Size(61, 33);
             this.arm1speed1.TabIndex = 37;
-            this.arm1speed1.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             // 
             // MainForm
             // 
