@@ -53,13 +53,13 @@ void wheelProcess(void)
 	for (index = 0; index < 3; index++) {
 		switch (index) {
 			case 0: /* L-wheel */
-				if (!L_1)      runningWheel.wheel[0].variability[0]++;
-				else if (!L_2) runningWheel.wheel[0].variability[1]++;
-				else if (!L_3) runningWheel.wheel[0].variability[2]++;
-				else if (!L_4) runningWheel.wheel[0].variability[3]++;
-				else if (!L_5) runningWheel.wheel[0].variability[4]++;
+				if (L_1)      runningWheel.wheel[0].variability[0]++;
+				else if (L_2) runningWheel.wheel[0].variability[1]++;
+				else if (L_3) runningWheel.wheel[0].variability[2]++;
+				else if (L_4) runningWheel.wheel[0].variability[3]++;
+				else if (L_5) runningWheel.wheel[0].variability[4]++;
 
-				for (index2 = 0; index2 < 5; index2++) {
+				for (index2 = 4; index2 >= 0; index2--) {
 					if (runningWheel.wheel[0].variability[index2] > IR_DETERMINE_THRESHOLD) {
 						runningWheel.wheel[0].variability[0] = 0;
 						runningWheel.wheel[0].variability[1] = 0;
@@ -77,13 +77,13 @@ void wheelProcess(void)
 				}
 				break;
 			case 1: /* M-wheel */
-				if (!M_1)      runningWheel.wheel[1].variability[0]++;
-				else if (!M_2) runningWheel.wheel[1].variability[1]++;
-				else if (!M_3) runningWheel.wheel[1].variability[2]++;
-				else if (!M_4) runningWheel.wheel[1].variability[3]++;
-				else if (!M_5) runningWheel.wheel[1].variability[4]++;
+				if (M_1)      runningWheel.wheel[1].variability[0]++;
+				else if (M_2) runningWheel.wheel[1].variability[1]++;
+				else if (M_3) runningWheel.wheel[1].variability[2]++;
+				else if (M_4) runningWheel.wheel[1].variability[3]++;
+				else if (M_5) runningWheel.wheel[1].variability[4]++;
 
-				for (index2 = 0; index2 < 5; index2++) {
+				for (index2 = 4; index2 >= 0; index2--) {
 					if (runningWheel.wheel[1].variability[index2] > IR_DETERMINE_THRESHOLD) {
 						runningWheel.wheel[1].variability[0] = 0;
 						runningWheel.wheel[1].variability[1] = 0;
@@ -101,13 +101,13 @@ void wheelProcess(void)
 				}
 				break;
 			case 2: /* R-wheel */
-				if (!R_1)      runningWheel.wheel[2].variability[0]++;
-				else if (!R_2) runningWheel.wheel[2].variability[1]++;
-				else if (!R_3) runningWheel.wheel[2].variability[2]++;
-				else if (!R_4) runningWheel.wheel[2].variability[3]++;
-				else if (!R_5) runningWheel.wheel[2].variability[4]++;
+				if (R_1)      runningWheel.wheel[2].variability[0]++;
+				else if (R_2) runningWheel.wheel[2].variability[1]++;
+				else if (R_3) runningWheel.wheel[2].variability[2]++;
+				else if (R_4) runningWheel.wheel[2].variability[3]++;
+				else if (R_5) runningWheel.wheel[2].variability[4]++;
 
-				for (index2 = 0; index2 < 5; index2++) {
+				for (index2 = 4; index2 >= 0; index2--) {
 					if (runningWheel.wheel[2].variability[index2] > IR_DETERMINE_THRESHOLD) {
 						runningWheel.wheel[2].variability[0] = 0;
 						runningWheel.wheel[2].variability[1] = 0;
