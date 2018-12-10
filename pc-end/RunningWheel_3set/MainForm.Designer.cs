@@ -1724,7 +1724,7 @@
             // 
             this.stopButton.Enabled = false;
             this.stopButton.Font = new System.Drawing.Font("PMingLiU", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.stopButton.Location = new System.Drawing.Point(1060, 496);
+            this.stopButton.Location = new System.Drawing.Point(1050, 496);
             this.stopButton.Name = "stopButton";
             this.stopButton.Size = new System.Drawing.Size(178, 94);
             this.stopButton.TabIndex = 85;
@@ -1736,7 +1736,7 @@
             // 
             this.isAutoSpeed.AutoSize = true;
             this.isAutoSpeed.Font = new System.Drawing.Font("PMingLiU", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.isAutoSpeed.Location = new System.Drawing.Point(919, 517);
+            this.isAutoSpeed.Location = new System.Drawing.Point(990, 555);
             this.isAutoSpeed.Name = "isAutoSpeed";
             this.isAutoSpeed.Size = new System.Drawing.Size(151, 31);
             this.isAutoSpeed.TabIndex = 94;
