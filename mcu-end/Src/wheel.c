@@ -36,7 +36,7 @@ void wheelProcess(void)
 {   
     uint8_t index, index2; /* for loop and array index use */
 
-    if (uart.Tstate == WAIT_KNOCK_DOOR)
+    if (uart.Tstate != IDLE)
         return;
 
     if (runningWheel.intervalFlag == 1) {    
