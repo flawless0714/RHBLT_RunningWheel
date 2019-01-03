@@ -10,7 +10,7 @@ extern volatile uint8_t pdata wifiRecvBuffer[RECV_BUFFER_SIZE];
 volatile Uart uart;
 extern volatile Mcu mcu;
 extern const uint16_t xdata SPEED_TABLE[6];
-/* debug */ SI_SBIT (LED0, SFR_P1, 4);
+/* debug */ //SI_SBIT (LED0, SFR_P1, 4);
 /* WARN: TODO: if this func encountered 0(null) in sendbuffer it will treat it as end of data then stop counting data requeste to send */
 void uartSend(uint8_t* buffer, uint8_t byteWaiting)
 {
@@ -159,6 +159,7 @@ bool uartIsDataKnockDoor(void)	/* with this implementation, data similarity shou
 		memset(&wifiRecvBuffer, 0, RECV_BUFFER_SIZE);
 		wifi.isDataChanged = 0;
 		uart.Tstate = IDLE;	/* training is about to begin */
+    	portInit();
 		return true;
 	}
 	/* WARN: with this implementation, we must guarantee that there are no other data sent at KNOCK_DOOR state, otherwise it will make mcu starts training once received some data (TODO) */
