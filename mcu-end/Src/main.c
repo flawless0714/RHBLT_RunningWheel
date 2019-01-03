@@ -21,7 +21,6 @@ void main()
     Init();
     uartInit();
     wifiInit();
-    portInit();
     BC_EN = BC_CONNECTED /*BC_CONNECTED*/; /* since we are now temporary using UART to send training data instead of wifi module, hence we assign UART to Board Controller to send data through usb virtual port directly */
     IE_EA = 1;
         
