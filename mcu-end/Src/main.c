@@ -1,4 +1,4 @@
-// Ver 0.3.0-rc
+// Ver 0.3.1
 /*
     1. Since the complicate step to setup wifi module(esp8266), we temporary deprecated the wifi transfer method and use USB-TTL instead.
 
@@ -241,7 +241,7 @@ void Init(void)
 
     P0SKIP = P0SKIP_B0__SKIPPED | P0SKIP_B1__SKIPPED
 			| P0SKIP_B2__SKIPPED | P0SKIP_B3__SKIPPED
-			| P0SKIP_B4__SKIPPED | P0SKIP_B5__SKIPPED
+			| P0SKIP_B4__NOT_SKIPPED | P0SKIP_B5__NOT_SKIPPED
 			| P0SKIP_B6__SKIPPED | P0SKIP_B7__SKIPPED;
 
     
@@ -312,8 +312,8 @@ void Init(void)
     TMR3CN1 |= 0x60; /* reload only on timer overflow */
     TMR3CN0 = 0x04; /* run control */
 
-    EIP1 |= 0x80;
-    EIP1H |= 0x80;
+    //EIP1 |= 0x80; priority level
+    //EIP1H |= 0x80;
     /*---------*/
 
     /* timer 2 */
