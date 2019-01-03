@@ -11,7 +11,6 @@ extern volatile Uart uart;
 extern volatile Mcu mcu;
 extern volatile Wifi wifi;
 
-SI_SBIT(LED1, SFR_P1, 5); // P1.4 LED0
 SI_SBIT(IR1, SFR_P0, 2);
 
 void UART0_ISR(void) interrupt UART0_IRQn /* WARN: we only turn interrupt at needed */
