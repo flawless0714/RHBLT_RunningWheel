@@ -133,6 +133,24 @@ void wheelProcess(void)
     
 }
 
+void portInit(void)
+{
+	L_1 = 0;
+	L_2 = 0;
+	L_3 = 0;
+	L_4 = 0;
+	L_5 = 0;
+	M_1 = 0;
+	M_2 = 0;
+	M_3 = 0;
+	M_4 = 0;
+	M_5 = 0;
+	R_1 = 0;
+	R_2 = 0;
+	R_3 = 0;
+	R_4 = 0;
+	R_5 = 0;
+}
 
 
 /*************flawless0714 * END OF FILE****/
