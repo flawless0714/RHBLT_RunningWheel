@@ -196,6 +196,8 @@ namespace RunningWheel_3set
                         globalBuffer.g_dataNeedProcess = false;
                         receiveDataList.Clear();
                         stopButton.Enabled = true;
+                        timerTimeElapsed.Enabled = true;
+                        startButton.BackColor = Color.Orange;
                     }
                     break;
                 case connectionStatus.CONNECTED:                   
@@ -694,8 +696,6 @@ namespace RunningWheel_3set
             endTimestamp = getCurrentTimestamp() + long.Parse(trainTime.Text) * 60;
             resultFilePath.ForeColor = Color.Black;
             resultFilePath.Text = resultFileDialog.FileName;
-            startButton.BackColor = Color.Orange;
-            timerTimeElapsed.Enabled = true;
             arm_Info.netState = connectionStatus.CONNECTED_KNOCK_DOOR;
             networkTimer.Enabled = true;
             isAutoSpeed.Enabled = false;
