@@ -34,9 +34,9 @@ SI_SBIT (R_5, SFR_P2, 5);
 */
 void wheelProcess(void)
 {   
-    uint8_t index, index2; /* for loop and array index use */
-
-    if (uart.Tstate != IDLE)
+    uint8_t index; /* for loop and array index use */
+	int8_t index2;
+    if (uart.Tstate != IDLE) 
         return;
 
     if (runningWheel.intervalFlag == 1) {    
@@ -130,7 +130,7 @@ void wheelProcess(void)
 
 
     
-    
+	
 }
 
 void portInit(void)
