@@ -10,6 +10,7 @@
 #define IR_DETERMINE_THRESHOLD 5000
 
 void wheelProcess(void);
+void portInit(void);
 
 
 typedef enum
